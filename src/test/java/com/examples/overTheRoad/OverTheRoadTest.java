@@ -4,8 +4,6 @@ package com.examples.overTheRoad;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.assertEquals;
-
 class OverTheRoadTest {
 
     @Test
@@ -25,5 +23,11 @@ class OverTheRoadTest {
         Assertions.assertEquals(16, OverTheRoad.overTheRoad(7, 11));
         Assertions.assertEquals(1999981L, OverTheRoad.overTheRoad(20, 1000000));
         Assertions.assertEquals(596421736780L, OverTheRoad.overTheRoad(23633656673L, 310027696726L));
+    }
+
+    @Test
+    public void invalidInputTests() {
+        Assertions.assertEquals(-1, OverTheRoad.overTheRoad(-1, -2));
+        Assertions.assertEquals(-1, OverTheRoad.overTheRoad(0, 0));
     }
 }
