@@ -6,6 +6,15 @@ import org.junit.jupiter.api.Test;
 import static org.junit.Assert.assertEquals;
 
 class OverTheRoadTest {
+
+    @Test
+    public void smallStreetTest() {
+        assertEquals(6, OverTheRoad.overTheRoad(1, 2));
+        assertEquals(4, OverTheRoad.overTheRoad(3, 2));
+        assertEquals(1, OverTheRoad.overTheRoad(6, 2));
+        assertEquals(3, OverTheRoad.overTheRoad(4, 2));
+    }
+
     @Test
     public void basicTestCases() {
         assertEquals(6, OverTheRoad.overTheRoad(1, 3));
