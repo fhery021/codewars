@@ -25,4 +25,9 @@ class EasyLineTest {
         testing(Easyline.easyLine(0), new BigInteger("1"));
     }
 
+    @Test
+    public void secondLineTest() {
+        testing(Easyline.easyLine(1), new BigInteger("2"));
+    }
+
 }
