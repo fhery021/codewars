@@ -20,4 +20,9 @@ class EasyLineTest {
         testing(Easyline.easyLine(19), new BigInteger("35345263800"));
     }
 
+    @Test
+    public void firstLineTest() {
+        testing(Easyline.easyLine(0), new BigInteger("1"));
+    }
+
 }
