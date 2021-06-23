@@ -1,4 +1,4 @@
-package com.examples.overTheRoad;
+package com.examples.codewars.kata.overTheRoad;
 
 
 import org.junit.jupiter.api.Assertions;
