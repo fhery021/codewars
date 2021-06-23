@@ -4,6 +4,6 @@ import java.math.BigInteger;
 
 public class Easyline {
     public static BigInteger easyLine(int i) {
-        return null;
+        return new BigInteger("1");
     }
 }
