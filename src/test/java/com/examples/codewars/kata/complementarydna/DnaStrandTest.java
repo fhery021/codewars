@@ -14,7 +14,8 @@ class DnaStrandTest {
 //    public void test02() {
 //        assertEquals("TAACG", DnaStrand.makeComplement("ATTGC"));
 //    }
-//    @Test
+
+    //    @Test
 //    public void test03() {
 //        assertEquals("CATA", DnaStrand.makeComplement("GTAT"));
 //    }
