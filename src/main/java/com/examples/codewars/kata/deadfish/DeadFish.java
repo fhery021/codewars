@@ -16,41 +16,42 @@ import java.util.Set;
  * Invalid characters should be ignored.
  */
 public class DeadFish {
-    private static final Set<Character> validCharacters = Set.of('i', 'd', 's', 'o');
-    private static int theValue = 0;
-    private static List<Integer> outputList = new ArrayList<>();
+
+    private static int theValue;
 
     public static int[] parse(String data) {
-        data.toLowerCase()
-                .codePoints()
-                .mapToObj(c -> (char) c)
-                .filter(validCharacters::contains)
-                .forEachOrdered(DeadFish::handleCharacter);
+        theValue = 0;
+        char[] characters  = data.toCharArray();
+        List<Integer> outputList = new ArrayList<>();
 
-        int[] outputArray;
-        outputArray = outputList.stream()
-                .mapToInt(Integer::intValue)
-                .toArray();
+        for(char character: characters){
+            if (handleCharacter(character)){
+                outputList.add(theValue);
+            }
+        }
 
+        int[] outputArray = new int[outputList.size()];
+        for(int i=0; i< outputList.size(); i++) {
+            outputArray[i] = outputList.get(i);
+        }
         return outputArray;
     }
 
-    private static void handleCharacter(Character character) {
+    private static boolean handleCharacter(char character) {
         switch (character) {
             case 'i':
                 theValue++;
-                break;
+                return false;
             case 'd':
                 theValue--;
-                break;
+                return false;
             case 's':
                 theValue = theValue * theValue;
-                break;
+                return false;
             case 'o':
-                outputList.add(theValue);
-                break;
+                return true;
             default:
-                break;
+                return false;
         }
     }
 }
