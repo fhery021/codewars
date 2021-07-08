@@ -21,20 +21,19 @@ public class DeadFish {
 
     public static int[] parse(String data) {
         theValue = 0;
-        char[] characters  = data.toCharArray();
+        char[] characters = data.toCharArray();
         List<Integer> outputList = new ArrayList<>();
 
-        for(char character: characters){
-            if (handleCharacter(character)){
+        for (char character : characters) {
+            if (handleCharacter(character)) {
                 outputList.add(theValue);
             }
         }
 
-        int[] outputArray = new int[outputList.size()];
-        for(int i=0; i< outputList.size(); i++) {
-            outputArray[i] = outputList.get(i);
-        }
-        return outputArray;
+        return outputList
+                .stream()
+                .mapToInt(Integer::intValue)
+                .toArray();
     }
 
     private static boolean handleCharacter(char character) {
