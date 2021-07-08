@@ -9,7 +9,6 @@ class DeadFishTest {
     @Test
     public void exampleTest() {
         assertArrayEquals(new int[] {8, 64}, DeadFish.parse("iiisdoso"));
-
     }
 
 }
