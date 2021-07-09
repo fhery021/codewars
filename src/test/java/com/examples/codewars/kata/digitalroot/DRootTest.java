@@ -15,4 +15,9 @@ class DRootTest {
     public void twoIterationsTest() {
         assertEquals(6, DRoot.digital_root(456));
     }
+
+    @Test
+    public void threeIterationsTest() {
+        assertEquals(2, DRoot.digital_root(493193));
+    }
 }
