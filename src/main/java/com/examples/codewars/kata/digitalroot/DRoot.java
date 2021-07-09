@@ -9,6 +9,9 @@ package com.examples.codewars.kata.digitalroot;
  * The input will be a non-negative integer.
  */
 public class DRoot {
+
+
+
     public static int digital_root(int n) {
         return 6;
     }
