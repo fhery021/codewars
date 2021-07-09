@@ -17,6 +17,11 @@ class DRootTest {
     }
 
     @Test
+    public void twoIterationsBiggerNumberTest() {
+        assertEquals(6, DRoot.digital_root(132189));
+    }
+
+    @Test
     public void threeIterationsTest() {
         assertEquals(2, DRoot.digital_root(493193));
     }

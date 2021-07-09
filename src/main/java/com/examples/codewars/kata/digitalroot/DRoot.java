@@ -1,7 +1,5 @@
 package com.examples.codewars.kata.digitalroot;
 
-import java.util.List;
-
 /**
  * Digital root is the recursive sum of all the digits in a number.
  * <p>
@@ -21,11 +19,11 @@ public class DRoot {
 
     public static int digital_root(int n) {
         int sum = sumOfDigits(n);
-        if (sum < 10) {
-            return sum;
-        } else {
+
+        while (sum >= 10) {
             sum = sumOfDigits(sum);
         }
+
         return sum;
     }
 }
